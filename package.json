@@ -19,7 +19,9 @@
     "quick.db": "^6.3.2",
     "jimp": "^0.9.3",
     "request": "^2.88.0",
-    "simple-youtube-api": "^5.2.1"
+    "simple-youtube-api": "^5.2.1",
+    "node-opus": "^0.3.2",
+    "moment-duration-format": "^2.2.2"
   },
   "engines": {
     "node": "10.x"

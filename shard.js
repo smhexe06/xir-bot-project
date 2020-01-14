@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client()
 
 const alpike = new Discord.ShardingManager('./bot.js', {
-    totalShards: 1,
+    totalShards: 6,
     token: process.env.token
 });
 

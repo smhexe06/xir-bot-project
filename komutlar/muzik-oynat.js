@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
 
     const embed = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription("Dinlemek istediğin şarkıyı yazmalısın! (Şarkı ismi veya Youtube URLsi)")
+    .setDescription(" Dinlemek istediğin şarkıyı yazmalısın! (Şarkı ismi veya Youtube URLsi)")
     if (!args[0]) return message.channel.send(embed);
         
     const voiceChannelAdd = new RichEmbed()

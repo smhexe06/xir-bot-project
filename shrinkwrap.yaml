@@ -10,6 +10,7 @@ dependencies:
   quick.db: 6.3.2
   request: 2.88.2
   simple-youtube-api: 5.2.1
+  snekfetch: 4.0.4
   ytdl-core: 2.0.0
 packages:
   /@babel/runtime/7.8.7:
@@ -1536,6 +1537,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vmndP9Bkh35tifn2OwY+th2imSsfYtmDqczgdOW5yEARFzvSoR8VSQFsivJnctfV5QHQUL6VrOpNdbmDRLh9Bg==
+  /snekfetch/4.0.4:
+    deprecated: use node-fetch instead
+    dev: false
+    resolution:
+      integrity: sha512-dyycG9fvwtSJqKPfMVOpXt+60qvMGe7vWLwOJDiSJaiAx+hs2EnFChG2bXCWn7ulz+zGzrHdN9/yeEb0YqEPww==
   /socket.io-adapter/1.1.2:
     dev: false
     resolution:
@@ -1806,4 +1812,5 @@ specifiers:
   quick.db: ^6.3.2
   request: ^2.88.2
   simple-youtube-api: ^5.2.1
+  snekfetch: ^4.0.4
   ytdl-core: ^2.0.0

@@ -143,7 +143,7 @@ exports.run = async (client, message, args) => {
 
         const playingBed = new RichEmbed()
         .setColor("GREEN")
-        .setAuthor(`**Şimdi Oynatılıyor:**`, song.thumbnail)
+        .setAuthor(`Şimdi Oynatılıyor:`, song.thumbnail)
         .setDescription(`[${song.title}](${song.url})`)
         .addField("**Süre:**", `${y}`, true)
         .addField("**Oynatan:**", `${song.requester}`, true)

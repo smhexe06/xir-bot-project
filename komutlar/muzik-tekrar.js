@@ -108,8 +108,8 @@ exports.run = async (client, message, args) => {
     .setColor("RANDOM")
     .setAuthor(`Şimdi Oynatılıyor`, song.thumbnail)
     .setDescription(`[${song.title}](${song.url})`)
-    .addField("Şarkı Süresi", `${y}`, true)
-    .addField("Şarkıyı Açan Kullanıcı", `${song.requester}`, true)
+    .addField("**Şarkı Süresi**", `${y}`, true)
+    .addField("**Şarkıyı Açan Kullanıcı**", `${song.requester}`, true)
     .setThumbnail(song.thumbnail)
     serverQueue.textChannel.send(playingBed);
   }

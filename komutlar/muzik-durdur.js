@@ -14,11 +14,11 @@ exports.run = async (client, message, args) => {
         
     const err1 = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`Bir sesli kanalda değilsin.`)  
+    .setDescription(`**Bir sesli kanalda değilsin.**`)  
     if (!voiceChannel) return message.channel.send(err1);
     const err2 = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`Şuanda herhangi bir şarkı çalmıyor.`)
+    .setDescription(`**Şu anda herhangi bir şarkı çalmıyor.**`)
     if (!serverQueue) return message.channel.send(err2);
     serverQueue.songs = [];
     const songEnd = new RichEmbed()

@@ -19,16 +19,16 @@ exports.run = async (client, message, args) => {
     if (!message.member.voiceChannel) return message.channel.send(asd1);
     const asd2 = new Discord.RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`Şuanda herhangi bir şarkı çalmıyor.`)
+    .setDescription(`**Şu anda herhangi bir şarkı çalmıyor.**`)
     if (!serverQueue) return message.channel.send(asd2);
 
-    if (!args[0]) return message.reply("Ses seviyesi ayarlamak için bir sayı yaz!");
+    if (!args[0]) return message.reply("**Ses seviyesi ayarlamak için bir sayı yaz!**");
     serverQueue.volume = args[0];
     if (args[1] > 10) return message.channel.send(`Ses seviyesi en fazla \`10\` olarak ayarlanabilir.`)
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0]);
     const volumeLevelEdit = new Discord.RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`Ayarlanan Ses Seviyesi: **${args[0]}**`)
+    .setDescription(`**Ayarlanan Ses Seviyesi:** **${args[0]}**`)
     return message.channel.send(volumeLevelEdit);
 
 };

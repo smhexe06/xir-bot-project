@@ -16,19 +16,19 @@ exports.run = async (client, message, args) => {
 
     const embed = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription(" Dinlemek istediğin şarkıyı yazmalısın! (Şarkı ismi veya Youtube URLsi)")
+    .setDescription("**Dinlemek istediğin şarkıyı yazmalısın! (Şarkı ismi veya Youtube URLsi)**")
     if (!args[0]) return message.channel.send(embed);
         
     const voiceChannelAdd = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`Lütfen herhangi bir sesli kanala katılınız.`)
+    .setDescription(`**Lütfen herhangi bir sesli kanala katılınız.**`)
     if (!voiceChannel) return message.channel.send(voiceChannelAdd);
 
     var permissions = voiceChannel.permissionsFor(client.user);
     if (!permissions.has('CONNECT')) {
       const warningErr = new RichEmbed()
       .setColor("RANDOM")
-      .setDescription(`Herhangi bir sesli kanala katılabilmek için yeterli iznim yok.`)
+      .setDescription(`❌ **Herhangi bir sesli kanala katılabilmek için yeterli iznim yok.**`)
       return message.channel.send(warningErr);
     }
     if (!permissions.has('SPEAK')) {
@@ -102,7 +102,7 @@ exports.run = async (client, message, args) => {
           } catch (error) {
             console.error(`Ses kanalına giremedim HATA: ${error}`);
             queue.delete(message.guild.id);
-            return message.channel.send(`Ses kanalına giremedim HATA: ${error}`);
+            return message.channel.send(`❌ **Ses kanalına giremedim HATA: ${error}**`);
           }
         } else {
           serverQueue.songs.push(song);
@@ -143,10 +143,10 @@ exports.run = async (client, message, args) => {
 
         const playingBed = new RichEmbed()
         .setColor("GREEN")
-        .setAuthor(`Şimdi Oynatılıyor`, song.thumbnail)
+        .setAuthor(`**Şimdi Oynatılıyor:**`, song.thumbnail)
         .setDescription(`[${song.title}](${song.url})`)
-        .addField("Süre", `${y}`, true)
-        .addField("Oynatan", `${song.requester}`, true)
+        .addField("**Süre:**", `${y}`, true)
+        .addField("**Oynatan:**", `${song.requester}`, true)
         .setThumbnail(song.thumbnail)
         serverQueue.textChannel.send(playingBed);
       }  

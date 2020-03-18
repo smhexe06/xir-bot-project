@@ -10,7 +10,7 @@ const db = require("quick.db");
 const http = require("http");
 const express = require("express");
 require("./util/eventLoader.js")(client);
-const path = require("path");
+const path = require("path")
 const request = require("request");
 const snekfetch = require("snekfetch");
 const queue = new Map();

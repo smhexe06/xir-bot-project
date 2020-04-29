@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
 
     if (!args[0]) return message.reply("**Ses seviyesi ayarlamak için bir sayı yaz!**");
     serverQueue.volume = args[0];
-    if (args[1] > 10) return message.channel.send(`Ses seviyesi en fazla \`10\` olarak ayarlanabilir.`)
+    if (args[0] > 10) return message.channel.send(`Ses seviyesi en fazla \`10\` olarak ayarlanabilir.`)
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0]);
     const volumeLevelEdit = new Discord.RichEmbed()
     .setColor("RANDOM")

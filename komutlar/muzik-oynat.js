@@ -149,7 +149,6 @@ exports.run = async (client, message, args) => {
         .addField("**Oynatan:**", `${song.requester}`, true)
         .setThumbnail(song.thumbnail)
         serverQueue.textChannel.send(playingBed);
-        serverQueue.textChannel.send(`**Aranan müzik** 🔎 **${song.title}**`);
       }  
 };
 

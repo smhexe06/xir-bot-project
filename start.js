@@ -24,7 +24,7 @@ client.on("ready", async () => {
 
 
 
-client.login('NzE0MjE2Nzc4MjgwMDc1MzA0.Xs6AwA.yl6laoA0Sy139Znyavl5DNsnql8');
+client.login(process.env.token);
 client.on('ready', () => {
   console.log(`${client.user.tag} İsmi ile giriş yapıldı!`);
 });

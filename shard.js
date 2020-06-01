@@ -3,7 +3,7 @@ const bot = new Discord.Client()
 
 const alpike = new Discord.ShardingManager('./bot.js', {
     totalShards: 2,
-    token: ('NzE0MjE2Nzc4MjgwMDc1MzA0.Xs6AwA.yl6laoA0Sy139Znyavl5DNsnql8')
+    token: process.env.token
 });
 
 alpike.spawn(); 

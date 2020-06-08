@@ -4,24 +4,23 @@ let prefix = '!'
 let yardım = new Discord.RichEmbed()  
 .setAuthor(`${client.user.username}`, client.user.avatarURL)
 .setColor('RANDOM')
-.addField('Music Bot | Yetkili Komutları',`
+.addField('Müzik Komutlar',`
 **!çal <şarkıismi>** : Belirttiğiniz Şarkıyı Sesli Odada Söyler
 **!duraklat** : Çalan Şarkıyı Durdurur
 **!devam** : Durdurduğunuz Şarkıyı Devam Ettirir
 **!tekrar** : Çalan Şarkıyı Tekrarlar
 **!geç** : Bi Sonraki Şarkıya Geçiş Yapar
-**!durdur** : Şarkıyı Durdurur 
-**!kuyruk** : Çalmakta Olan Şarkı Listesini Verir`)
+**!durdur** : Şarkıyı Durdurur`)
 .setThumbnail("https://media.giphy.com/media/l46CqqobS7VRaIpSE/giphy.gif")
  message.channel.send(yardım) 
   };
 exports.conf = {
   enabled: true,  
   guildOnly: false, 
-  aliases: ["this"], 
+  aliases: ["yardım"], 
   permLevel: 0
 };
 exports.help = {
-  name: 'this'
+  name: 'yardım'
 };
   

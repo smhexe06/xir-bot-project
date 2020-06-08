@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
         serverQueue.connection.dispatcher.resume();
         const asjdhsaasjdhaadssad = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`Şarkı başarıyla devam ettiriliyor...`)
+    .setDescription(`**Şarkı Devam Ettiriliyor**`)
       return message.channel.send(asjdhsaasjdhaadssad);
     }
     const b = new RichEmbed()
@@ -34,13 +34,13 @@ exports.run = async (client, message, args) => {
 
 exports.conf = {
     enabled: true,
-    aliases: ['devam-et'],
+    aliases: ['devam'],
     permLevel: 0
 };
 
 exports.help = {
-    name: 'devamet',
+    name: 'devam',
     description: 'Duraklatılmış şarkıyı devam ettirir.',
-    usage: 'devamet'
+    usage: 'devam'
 };
    

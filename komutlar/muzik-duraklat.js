@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
     serverQueue.connection.dispatcher.pause();
         const asjdhsaasjdhaadssad = new RichEmbed()
     .setColor("RANDOM")
-    .setDescription(`✅**Şarkı başarıyla duraklatıldı!**`)
+    .setDescription(`**Şarkı başarıyla duraklatıldı!**`)
       return message.channel.send(asjdhsaasjdhaadssad);
     }
     const b = new RichEmbed()

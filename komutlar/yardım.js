@@ -1,0 +1,28 @@
+const Discord = require('discord.js');
+exports.run = async (client, message, args) => { 
+let prefix = '!'
+let yardım = new Discord.RichEmbed()  
+.setAuthor(`${client.user.username}`, client.user.avatarURL)
+.setColor('RANDOM')
+.addField('Music Bot | Yetkili Komutları',`
+**!çal <şarkıismi>** : Belirttiğiniz Şarkıyı Sesli Odada Söyler
+**!duraklat** : Çalan Şarkıyı Durdurur
+**!devam** : Durdurduğunuz Şarkıyı Devam Ettirir
+**!tekrar** : Çalan Şarkıyı Tekrarlar
+**!geç** : Bi Sonraki Şarkıya Geçiş Yapar
+**!durdur** : Şarkıyı Durdurur 
+**!kuyruk** : Çalmakta Olan Şarkı Listesini Verir`)
+.setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
+.setThumbnail("https://media.giphy.com/media/l46CqqobS7VRaIpSE/giphy.gif")
+ message.channel.send(yardım) 
+  };
+exports.conf = {
+  enabled: true,  
+  guildOnly: false, 
+  aliases: ["help"], 
+  permLevel: 0
+};
+exports.help = {
+  name: 'this'
+};
+  

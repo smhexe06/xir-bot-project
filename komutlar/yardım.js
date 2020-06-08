@@ -1,28 +1,43 @@
 const Discord = require('discord.js');
-exports.run = async (client, message, args) => { 
-let prefix = '!'
-let yardım = new Discord.RichEmbed()  
-.setAuthor(`${client.user.username}`, client.user.avatarURL)
-.setColor('RANDOM')
-.addField('Music Bot | Yetkili Komutları',`
-**!çal <şarkıismi>** : Belirttiğiniz Şarkıyı Sesli Odada Söyler
-**!duraklat** : Çalan Şarkıyı Durdurur
-**!devam** : Durdurduğunuz Şarkıyı Devam Ettirir
-**!tekrar** : Çalan Şarkıyı Tekrarlar
-**!geç** : Bi Sonraki Şarkıya Geçiş Yapar
-**!durdur** : Şarkıyı Durdurur 
-**!kuyruk** : Çalmakta Olan Şarkı Listesini Verir`)
-.setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
-.setThumbnail("https://media.giphy.com/media/l46CqqobS7VRaIpSE/giphy.gif")
- message.channel.send(yardım) 
-  };
-exports.conf = {
-  enabled: true,  
-  guildOnly: false, 
-  aliases: ["help"], 
-  permLevel: 0
-};
-exports.help = {
-  name: 'this'
-};
+const ayarlar = require('../ayarlar.json');
+var prefix = ayarlar.prefix;
+exports.run = (client, message, args) => {
   
+    const venqtm= new Discord.RichEmbed()
+    .setColor('RED')
+    .setAuthor(`LoxyGUARD`, client.user.avatarURL) 
+      .addField(`**Komutlar**`, 
+                      `\n    
+                      **ban-limit** : Ban Limit Sistemi
+                      **banlananlar** : Banalananlar Listesi
+                      **kullanıcı-bilgi** : Kullanıcı Bilgi Sistemi
+                      **capslock-engelleme** : Caps Engel Sistemi
+                      **temizle** : Gelimiş Temizle Sistemi
+                      **notal** : Not Alma Sistemi
+                      **forceban** : Force Ban Sistemi
+                      **uyar** : Uyarı Sistemi
+                      **reklam-engelleme** : Reklam Engel Sistemi
+                      **küfür-engel** : Küfür Engel Sistemi
+                      **sohbet-aç** : Sohbeti Açma Sistemi
+                      **sohbet-kapat** : Sohbet Kapatma Sistemi
+                      **ban** : Ban Sistemi
+                      **kilit** : Kilit Sistemi
+                      **rol-koruma** : Rol Koruma Sistemi
+`)
+    .setFooter(``, client.user.avatarURL)
+    message.channel.send(venqtm).catch()
+
+};
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: ['yy'],
+    permLevel: 0
+};
+
+exports.help = {
+    name: 'yy',
+      category: 'Yardım Menüsü',
+      description: 'yy',
+};

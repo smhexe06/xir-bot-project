@@ -28,5 +28,3 @@ client.login(process.env.token);
 client.on('ready', () => {
   console.log(`${client.user.tag} İsmi ile giriş yapıldı!`);
 });
-
-

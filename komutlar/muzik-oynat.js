@@ -142,8 +142,13 @@ exports.run = async (client, message, args) => {
         }
 
         const playingBed = new RichEmbed()
-        serverQueue.textChannel.send(`**Aranan müzik** 🔎 **${song.title}**`)
-        serverQueue.textChannel.send(`**Aratan kişi** 🔎 **<@${message.author.id}> Tarafından**`)
+        .setColor("GREEN")
+        .setAuthor(`Şimdi Oynatılıyor:`, song.thumbnail)
+        .setDescription(`[${song.title}](${song.url})`)
+        .addField("**Süre:**", `${y}`, true)
+        .addField("**Oynatan:**", `${song.requester}`, true)
+        .setThumbnail(song.thumbnail)
+        serverQueue.textChannel.send(playingBed);
       }  
 };
 

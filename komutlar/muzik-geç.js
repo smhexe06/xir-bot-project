@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { RichEmbed } = require('discord.js');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-const youtube = new YouTube('AIzaSyCKjR2_mse6dZ_rBoYstU6w5r71OwU9bCE');
+const youtube = new YouTube('AIzaSyBHp_5kYzIvI7Cd9tucCcJgL9VoaNUnQqY');
 
 
 exports.run = async (client, message, args) => {

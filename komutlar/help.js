@@ -21,10 +21,10 @@ let yardım = new Discord.RichEmbed()
 exports.conf = {
   enabled: true,  
   guildOnly: false, 
-  aliases: ["help"], 
+  aliases: ["müzik"], 
   permLevel: 0
 };
 exports.help = {
-  name: 'help'
+  name: 'müzik'
 };
   

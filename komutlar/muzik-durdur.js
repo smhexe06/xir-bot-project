@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
     serverQueue.songs = [];
     const songEnd = new RichEmbed()
     .setColor("B71C1C")
-    .setDescription(`**Şarkı başarıyla durduruldu ve odadan ayrıldım!**`)
+    .setDescription(`**Şarkı kapatıldı**`)
     serverQueue.connection.dispatcher.end('');
     message.channel.send(songEnd);
 };

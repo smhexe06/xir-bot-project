@@ -13,7 +13,7 @@ exports.run = async (client, message) => {
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: [],  
   permLevel: 0,
 };
 

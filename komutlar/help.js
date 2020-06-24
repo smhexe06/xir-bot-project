@@ -11,6 +11,7 @@ let yardım = new Discord.RichEmbed()
 **!tekrar** : Çalan Şarkıyı Tekrarlar
 **!geç** : Bi Sonraki Şarkıya Geçiş Yapar
 **!durdur** : Şarkıyı Durdurur 
+**!çek** : Botu Sese Çeker 
 **!ses** : Ses Seviyesini Belirler`)
 .setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
 .setThumbnail("https://media.giphy.com/media/Z9WQLSrsQKH3uBbiXq/giphy.gif")

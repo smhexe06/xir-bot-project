@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { RichEmbed } = require('discord.js');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-const ayarlar = require('../ayarlar.json');
+const youtube = new YouTube('AIzaSyAfjqdf8GoWidpcdFz7hF6F8-3Gqbjw3vA');
 
 exports.run = async (client, message, args) => {
         const queue = client.queue;
@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
       
   /*var pla = await youtube.getPlaylist(u);
     var v = await pla.getVideos();*/
-    var vi2 = await ayarlar.codeapi.getVideoByID(u.id);
+    var vi2 = await youtube.getVideoByID(u.id);
     await handleVideo(vi2, message, voiceChannel, true);
   const PlayingListAdd = new RichEmbed()
   .setColor("RANDOM")

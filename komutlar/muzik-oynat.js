@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { RichEmbed } = require('discord.js');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-const youtube = new YouTube('AIzaSyDvFod_R6GjAN_mYlm7Smim3NCFH-A0M04');
+const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
 
@@ -38,10 +38,10 @@ exports.run = async (client, message, args) => {
       return message.channel.send(musicErr);
     }
       if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
-      var playlist = await youtube.getPlaylist(url);
+      var playlist = await ayarlar.codeapi.getPlaylist(url);
       var videos = await playlist.getVideos();
       for (const video of Object.values(videos)) {
-        var video2 = await youtube.getVideoByID(video.id);
+        var video2 = await ayarlar.codeapi.getVideoByID(video.id);
         await handleVideo(video2, message.message, voiceChannel, true);
       }
       const PlayingListAdd = new RichEmbed()
@@ -50,14 +50,14 @@ exports.run = async (client, message, args) => {
       return message.channel.send(PlayingListAdd);
     } else {
       try {
-        var video = await youtube.getVideo(url);
+        var video = await ayarlar.codeapi.getVideo(url);
       } catch (error) {
       try {
-          var videos = await youtube.searchVideos(searchString, 10);
+          var videos = await ayarlar.codeapi.searchVideos(searchString, 10);
           
           var r = 1
         
-          var video = await youtube.getVideoByID(videos[r - 1].id);
+          var video = await ayarlar.codeapi.getVideoByID(videos[r - 1].id);
         } catch (err) {
           console.error(err);
           const songNope = new RichEmbed()

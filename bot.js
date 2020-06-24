@@ -16,6 +16,7 @@ const snekfetch = require("snekfetch");
 const queue = new Map();
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
+
 client.queue = new Map()
 
 
@@ -115,4 +116,4 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.login(process.env.token);
+client.login(ayarlar.codetoken);
